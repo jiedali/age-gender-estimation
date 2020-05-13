@@ -37,7 +37,7 @@ def get_args():
                         help="path to input database mat file")
     parser.add_argument("--batch_size", type=int, default=32,
                         help="batch size")
-    parser.add_argument("--nb_epochs", type=int, default=30,
+    parser.add_argument("--nb_epochs", type=int, default=3,
                         help="number of epochs")
     parser.add_argument("--lr", type=float, default=0.1,
                         help="initial learning rate")
