@@ -71,7 +71,6 @@ class Schedule:
             return self.initial_lr * 0.04
         return self.initial_lr * 0.008
 
-
 def get_optimizer(opt_name, lr):
     if opt_name == "sgd":
         return SGD(lr=lr, momentum=0.9, nesterov=True)
@@ -152,6 +151,7 @@ def main():
                          validation_data=(X_test, [y_test_g, y_test_a]))
 
     logging.debug("Saving history...")
+    logging.debug(output_path.joinpath("history_{}_{}.h5".format(depth, k)))
     pd.DataFrame(hist.history).to_hdf(output_path.joinpath("history_{}_{}.h5".format(depth, k)), "history")
 
 
