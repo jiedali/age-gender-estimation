@@ -28,7 +28,7 @@ def main():
     plt.savefig(os.path.join(input_dir, "loss.png"))
     plt.cla()
 
-    plt.plot(df["pred_gender_acc"], label="accuracy (gender)")
+    plt.plot(df["pred_gender_accuracy"], label="accuracy (gender)")
     plt.plot(df["pred_age_acc"], label="accuracy (age)")
     plt.plot(df["val_pred_gender_acc"], label="val_accuracy (gender)")
     plt.plot(df["val_pred_age_acc"], label="val_accuracy (age)")
